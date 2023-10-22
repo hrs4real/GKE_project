@@ -1,1 +1,2 @@
-# GKE_project
+- Written in python
+- Deployed on GKE
