@@ -21,8 +21,8 @@ spec:
           - name: PORT
             value: "5000"
 ---
-apiVersion: v1
-kind: Service
+apiVersion: "v1"
+kind: "Service"
 metadata:
   name: "gcp-devops-gke-service"
   namespace: "gcp-devops-prod"
@@ -35,4 +35,4 @@ metadata:
         targetPort: 5000
       selector:
         app: "gcp"
-      type: LoadBalancer
+      type: "LoadBalancer"
