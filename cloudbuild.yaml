@@ -4,7 +4,7 @@ steps:
   args: ['build','-t','gcr.io/$PROJECT_ID/gcpdevops','.']
 # push conatiner image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','-t','gcr.io/$PROJECT_ID/gcpdevops','.']
+  args: ['push','gcr.io/$PROJECT_ID/gcpdevops']
 # deploy conatiner image to GKE
 - name: 'gcr.io/cloud-builders/gke-deploy'
   args:
@@ -12,5 +12,5 @@ steps:
   - --filename=gke.yaml
   - --image=gcr.io/$PROJECT_ID/gcpdevops
   - --location=us-central1-c
-  - --cluster=gke-gcp-devops
+  - --cluster=gcp-devop-project
   - --namespace=gcp-devops-prod
